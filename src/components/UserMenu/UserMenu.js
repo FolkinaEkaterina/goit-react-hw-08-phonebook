@@ -5,12 +5,12 @@ import { Wrapper, OutBtn, Username } from '../Phonebook.styled';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
-  const name = useSelector(authSelectors.selectUserName);
+  const email = useSelector(authSelectors.selectUserEmail);
 
   return (
     <Wrapper>
       <p>Welcome,</p>
-      <Username>{name}</Username>
+      <Username>{email}</Username>
       <OutBtn type="button" onClick={() => dispatch(logOut())}>
         Logout
       </OutBtn>
