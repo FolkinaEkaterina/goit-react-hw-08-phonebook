@@ -11,7 +11,7 @@ export const Header = styled.header`
 export const Container = styled.div`
   width: 600px;
   margin: 0 auto;
-  padding: 80px 0px 15px 0px;
+  padding: 40px 0px 15px 0px;
 `;
 
 export const Title = styled.h2`
@@ -79,14 +79,13 @@ export const Item = styled.li`
 `;
 
 export const Section = styled.div`
-  width: 100%;
+  width: 700px;
+  margin: 80px auto;
   position: relative;
   text-transform: uppercase;
   font-size: 100px;
   font-weight: bold;
   line-height: 142px;
-  padding: 0;
-  margin: 0;
 `;
 
 export const First = styled.h1`
