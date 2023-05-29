@@ -3,9 +3,9 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
-  async (_, thunkAPI) => {
+  async (credentials, thunkAPI) => {
     try {
-      const { data } = await axios.get('/contacts');
+      const { data } = await axios.get('/contacts', credentials);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -15,9 +15,9 @@ export const fetchContacts = createAsyncThunk(
 
 export const addContact = createAsyncThunk(
   'contacts/addContact',
-  async (newContact, thunkAPI) => {
+  async (credentials, thunkAPI) => {
     try {
-      const { data } = await axios.post('/contacts', newContact);
+      const { data } = await axios.post('/contacts', credentials);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
